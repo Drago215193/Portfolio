@@ -37,6 +37,7 @@ function leftSlider() {
 	document.querySelector('.right').classList.toggle('colored');
 	document.querySelector('.left').classList.toggle('colored');
 
+
 }
 
 //add function to showMore btn
@@ -132,4 +133,11 @@ document.querySelector('.close').addEventListener('click', function() {
 	document.querySelector('.close').style.display = 'none';
 
 
+});
+
+//light to dark mode
+const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
 });

@@ -1,4 +1,65 @@
 /*reset*/
+/*Checkbox Button*/
+.center {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+
+.center input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px #1f1f1f, inset -2px -2px 5px rgba(255, 255, 255, .1), inset 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: 0.5s;
+}
+
+.center input:checked[type="checkbox"] {
+  background: #00c9ff;
+  box-shadow: 0 0 0 2px #1f1f1f, 0 10px 20px rgba(0, 0, 0, .5), inset 0 0 5px rgba(0, 0, 0, 1), inset 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.center input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(to top, #000, #6b6b6b);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+
+.center input:checked[type="checkbox"]:before {
+  left: 20px;
+}
+
+.center input[type="checkbox"]:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 45px;
+  width: 4px;
+  height: 4px;
+  background: Black;
+  box-shadow: 0 0 5px Black, 0 0 15px Black, 0 0 30px Black;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.center input:checked[type="checkbox"]:after {
+  background: #00c9ff;
+  left: 65px;
+  box-shadow: 0 0 3px #00c9ff, 0 0 9px #00c9ff, 0 0 27px #00c9ff;
+}
 
 * {
 
@@ -16,7 +77,7 @@
 	display: none;
 
 }
-html, body {
+body.dark-theme html, body {
 
   	overflow-x: hidden;
   	width: 100%;
@@ -26,13 +87,13 @@ html, body {
 }
 /*style the header */
 
-header {
+body.dark-theme header {
 
   	height: 10vh;
-	background-color: #4F86F7;
+	background-color: #1A1A1B;
 	font-family: "Gugi", cursive;
 }
-header .nav {
+body.dark-theme header .nav {
 
 	display: flex;
   	flex-direction: row;
@@ -42,12 +103,12 @@ header .nav {
   	padding: 20px 50px 20px 0;
   	position: fixed;
   	z-index: 4;
-  	background-color: #2E2630;
+  	background-color: #1A1A1B;
   	width: 100%;
   	opacity: .8;
 }
 
-.nav a {
+body.dark-theme  .nav a {
 
 	padding: 0 40px 0 50px;
 	color: #FFFFFF;
@@ -55,7 +116,7 @@ header .nav {
   	font-size: 1.5vw;
 	margin-top: -5px;
 }
-.nav a:hover {
+body.dark-theme .nav a:hover {
 
   	color: #FC2277;
 }
@@ -66,17 +127,17 @@ header .nav {
 /*add animation class*/
 
 
-.container .welcome-sec {
+body.dark-theme .container .welcome-sec {
 
-	background-color: #4F86F7;
-  	color: Black;
+	background-color: #1A1A1B;
+  	color: #CFCFCF;
   	text-align: center;
   	height: 90vh;
   	position: relative;
 
 
 }
-.welcome-sec .welcome-part {
+body.dark-theme .welcome-sec .welcome-part {
 
   	margin: 0 auto;
  /*for animation*/
@@ -99,7 +160,7 @@ header .nav {
 
 
 
-.forward {
+body.dark-theme .forward {
 
 	animation: sliding-forward 2s ease-in-out;
 	transform: translateX(-400%);
@@ -107,7 +168,7 @@ header .nav {
 }
 
 
-.back {
+body.dark-theme .back {
 
 	animation: sliding-back 2s ease-in-out;
 	transform: translateX(0%);
@@ -117,46 +178,46 @@ header .nav {
 /*add animation for slider*/
 
 
-.welcome-part .photo-div {
+body.dark-theme .welcome-part .photo-div {
   padding: 100px 0 30px 0;
   margin: 0 auto;
   text-align: center;
 }
 
-.photo-div .photo {
+body.dark-theme .photo-div .photo {
   border-radius: 50%;
   width: 150px;
   height: 150px;
 }
 
-.welcome-part h1 {
+body.dark-theme .welcome-part h1 {
   font-size: 4vw;
   font-weight: 700;
   padding: 0 0 10px 0;
   font-family: "Gugi", cursive;
 }
 
-.welcome-part h1 span {
+body.dark-theme .welcome-part h1 span {
   color: #A3395B;
 	font-size: 3vw
 }
 
-.welcome-part p {
+body.dark-theme .welcome-part p {
 
 	font-size: 2vw;
 }
-.container .welcome-sec .about {
+body.dark-theme .container .welcome-sec .about {
   	width: 500px;
   	text-align: center;
 	margin: -200px auto 0 auto;
 }
 
-.welcome-sec .not-visible {
+body.dark-theme .welcome-sec .not-visible {
 
 	transform:  translateX(-400%);
 }
 
-.container .welcome-sec .about h2 {
+body.dark-theme .container .welcome-sec .about h2 {
   font-size: 3vw;
   font-weight: 600;
   color: #A3395B;
@@ -164,40 +225,40 @@ header .nav {
   text-transform: capitalize;
 }
 
-.container .welcome-sec .about p {
+body.dark-theme .container .welcome-sec .about p {
   	font-weight: 400;
 	padding-bottom: 30px;
 	line-height: 20px;
 
 }
 
-.container .welcome-sec .about .social i {
+body.dark-theme .container .welcome-sec .about .social i {
   padding: 15px 0 0 20px;
   font-size: 25px;
-  color: Black;
+  color: #CFCFCF;
 }
 
-.container .welcome-sec .about .social i:hover {
+body.dark-theme .container .welcome-sec .about .social i:hover {
   color: #A3395B;
   cursor: pointer;
 }
 
-.container .welcome-sec .contain {
+body.dark-theme .container .welcome-sec .contain {
   display: flex;
   justify-content: center;
 
-position: absolute;
+  position: absolute;
   left: 600px;
   top: 450px;
 
 }
 
-.contain{
+body.dark-theme .contain{
 	align-items: center;
 	padding-left: 50px;
 }
 
-.container .welcome-sec .contain .circle {
+body.dark-theme .container .welcome-sec .contain .circle {
   display: block;
   border-color: #FFFFFF;
   width: 20px;
@@ -207,18 +268,18 @@ position: absolute;
   cursor: pointer;
 }
 
-.container .welcome-sec .contain .colored {
+body.dark-theme .container .welcome-sec .contain .colored {
   background-color: #A3395B;
 }
 
-.container .welcome-sec .contain .right {
+body.dark-theme .container .welcome-sec .contain .right {
   margin-left: 10px;
 }
 
 /*style projects section*/
 
-.container .projects-sec {
-	background-color: #A0E6FF;
+body.dark-theme .container .projects-sec {
+	background-color: #2E2630 ;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -226,14 +287,15 @@ position: absolute;
   padding: 100px 0 70px 0;
 }
 
-.projects-sec .sec-title {
+body.dark-theme .projects-sec .sec-title {
+  color: #CFCFCF;
   text-align: center;
   width: 100%;
   align-items: center;
   margin-bottom: 50px;
 }
 
-.projects-sec .sec-title h2 {
+body.dark-theme .projects-sec .sec-title h2 {
   padding-bottom: 5px;
   border-bottom-color: #A3395B;
   border-bottom-width: thick;
@@ -245,14 +307,14 @@ position: absolute;
   margin: 0 auto;
 }
 
-.projects-sec .project-container {
+body.dark-theme .projects-sec .project-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.proj-contain {
+body.dark-theme .proj-contain {
 	display: none;
   margin: 0 0 70px 0;
   border-radius: 6px;
@@ -264,26 +326,26 @@ position: absolute;
   position: relative;
   overflow: hidden;
 }
-.project-1 {
+body.dark-theme .project-1 {
 
 	display: block;
 
 }
 
-.project-2 {
+body.dark-theme .project-2 {
 
 	display: block;
 }
-.proj-screenshot {
+body.dark-theme .proj-screenshot {
   width: 100%;
 }
 
-.proj-screenshot:hover {
+body.dark-theme .proj-screenshot:hover {
   width: 120%;
   transition: width 1s ease-in-out;
 }
 
-.project-title {
+body.dark-theme .project-title {
   background-color: #273344;
   z-index: 3;
   opacity: .8;
@@ -295,55 +357,55 @@ position: absolute;
   height: 40%;
 }
 
-.project-title h6 {
+body.dark-theme .project-title h6 {
   font-size: 20px;
   color: #FFFFFF;
   font-weight: 600;
   font-family: "Gugi", cursive;
 }
 
-.project-title p {
+body.dark-theme .project-title p {
   padding: 5px 50px 10px 0;
   color: #FFFFFF;
 }
-.project-title .links {
+body.dark-theme .project-title .links {
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
-.project-title ul {
+body.dark-theme .project-title ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding: 5px 10px 0 10px;
 }
 
-.project-title ul li {
+body.dark-theme .project-title ul li {
   padding-left: 10px;
 }
 
-.project-title ul li i {
+body.dark-theme .project-title ul li i {
   font-size: 25px;
 }
 
-.project-title ul li .fa-css3-alt {
+body.dark-theme .project-title ul li .fa-css3-alt {
   color: #1B90D4;
 }
 
-.project-title ul li .fa-html5 {
+body.dark-theme .project-title ul li .fa-html5 {
   color: #EC5D28;
 }
 
-.project-title ul li .fa-js-square {
+body.dark-theme .project-title ul li .fa-js-square {
   color: #F0D91D;
 }
 
-.project-title ul li .fa-sass {
+body.dark-theme .project-title ul li .fa-sass {
   color: #CD6799;
 }
 
-.project-title .website-link {
+body.dark-theme .project-title .website-link {
   	position: relative;
 	right: 60px;
 	font-size: 18px;
@@ -354,84 +416,84 @@ position: absolute;
 }
 
 
-.project-container .project-2 {
+body.dark-theme .project-container .project-2 {
   margin-left: 90px;
 }
 
-.project-3 .project-title .website-link {
+body.dark-theme .project-3 .project-title .website-link {
   top: -20px;
 }
 
 
 
 
-.project-4 .proj-screenshot:hover {
+body.dark-theme .project-4 .proj-screenshot:hover {
   height: 120%;
   width: 120%;
   transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-.project-4 .project-title .website-link {
+body.dark-theme .project-4 .project-title .website-link {
   top: -20px;
 }
 
 
-.project-5 .proj-screenshot {
+body.dark-theme .project-5 .proj-screenshot {
   height: 100%;
   width: 100%;
 }
 
-.project-5 .proj-screenshot:hover {
+body.dark-theme .project-5 .proj-screenshot:hover {
   height: 120%;
   width: 110%;
   transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-.project-5 .project-title .website-link {
+body.dark-theme .project-5 .project-title .website-link {
   top: -20px;
 }
 
 
-.project-6 .proj-screenshot {
+body.dark-theme .project-6 .proj-screenshot {
   height: 100%;
 }
 
-.project-1 .website-link {
+body.dark-theme .project-1 .website-link {
 
 	top: 10px;
 }
 
-.project-2 .website-link {
+body.dark-theme .project-2 .website-link {
 	top: 10px;
 }
 
-.project-3 .website-link {
+body.dark-theme .project-3 .website-link {
 
 
 	margin-top: 25px;
 }
 
-.project-4 .website-link {
+body.dark-theme .project-4 .website-link {
 
 	margin-top: 40px;
 }
 
-.project-5 .website-link {
+body.dark-theme .project-5 .website-link {
 
 	margin-top: 30px;
 }
 
-.project-6 .website-link {
+body.dark-theme .project-6 .website-link {
 
 	margin-top: 10px;
 }
-.project-6 .proj-screenshot:hover {
+body.dark-theme .project-6 .proj-screenshot:hover {
   height: 130%;
   width: 120%;
   transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
-.projects-sec .more, .projects-sec .less {
+body.dark-theme .projects-sec .more, .projects-sec .less {
   width: 140px;
   height: 40px;
   background-color: #4F86F7;
@@ -447,25 +509,25 @@ position: absolute;
   box-shadow: 4px 4px 4px #CFCFCF;
 }
 
-.projects-sec .more i, .projects-sec .less i {
+body.dark-theme .projects-sec .more i, .projects-sec .less i {
   padding: 0 0 0 5px;
   font-size: 18px;
 }
 
-.projects-sec .toggle {
+body.dark-theme .projects-sec .toggle {
   display: none;
 }
 
 /*style conatct section*/
 
-.contact {
+body.dark-theme .contact {
 
-  background-color: #4F86F7;
+  background-color: #1A1A1B;
   padding: 10px 0 20px 0;
 
 }
 
-.contact .contact-div {
+body.dark-theme .contact .contact-div {
   margin: 20px auto;
   text-align: center;
   border-style: solid;
@@ -478,7 +540,7 @@ position: absolute;
   box-shadow: 2px 3px #CFCFCF;
 }
 
-.contact .contact-div h2 {
+body.dark-theme .contact .contact-div h2 {
   font-size: 2vw;
   font-family: "Gugi", cursive;
   font-weight: 600;
@@ -486,17 +548,17 @@ position: absolute;
   text-transform: uppercase;
 }
 
-.contact .contact-div p {
+body.dark-theme .contact .contact-div p {
   font-size: 19px;
   padding-top: 20px;
 }
 
-.contact .contact-div p span {
+body.dark-theme .contact .contact-div p span {
   color: #A3395B;
   font-weight: 700;
 }
 
-.contact .contact-div .email {
+body.dark-theme .contact .contact-div .email {
   color: #A3395B;
   padding-bottom: 2px;
   padding-top: 10px;
@@ -508,29 +570,29 @@ position: absolute;
   font-size: 25px;
 }
 
-.contact .social {
+body.dark-theme .contact .social {
   margin: 0 auto;
   text-align: center;
 }
 
-.contact .social a {
-  color: Black;
+body.dark-theme .contact .social a {
+  color: #CFCFCF;
   padding-left: 25px;
 }
 
-.contact .social i {
+body.dark-theme .contact .social i {
 
 	font-size: 25px;
 }
-.contact .social a:hover {
+body.dark-theme .contact .social a:hover {
   color: #A3395B;
 }
 
-footer {
-  color: Black;
+body.dark-theme footer {
+  color: #CFCFCF;
   text-align:center;
   padding: 5px 30px;
-	background-color: #A0E6FF
+	background-color: #2E2630;
 }
 
 
@@ -538,29 +600,29 @@ footer {
 
 @media only screen and (max-width: 500px) {
 
-	header .nav {
+	body.dark-theme header .nav {
 
 		display: none;
 	}
 
-	.nav-icon, .mobile-navbar {
+	body.dark-theme .nav-icon, .mobile-navbar {
 
 		display: block;
 	}
 
 
 
-	.nav-icon i {
+	body.dark-theme .nav-icon i {
 
 		font-size: 40px;
-		color: white;
+		color: #CFCFCF;
 		float: right;
 		margin: 10px;
 		cursor: pointer;
 
 	}
 
-	.menu {
+	body.dark-theme .menu {
 
 		position: absolute;
 		right: 5px;
@@ -576,14 +638,14 @@ footer {
 
 	}
 
-	.close i {
+	body.dark-theme .close i {
 
 		font-size: 40px;
 		text-align: right;
-		color: white;
+		color: #CFCFCF;
 
 	}
-	.close {
+	body.dark-theme .close {
 
 		position: absolute;
 		right: 1px;
@@ -591,102 +653,102 @@ footer {
 		display: none;
 
 	}
-	.menu li:first-of-type {
+	body.dark-theme .menu li:first-of-type {
 
 		margin-top: 200px;
 	}
-	.menu li {
+	body.dark-theme .menu li {
 
 		margin: 40px;
 	}
-	.menu li a {
+	body.dark-theme .menu li a {
 
-		color: white;
+		color: #CFCFCF;
 		text-decoration: none;
 		margin: 10px;
 		font-size: 30px;
 	}
 
-	.menu li a:hover {
+	body.dark-theme .menu li a:hover {
 
 		color: #A3395B;
 
 	}
 
 /*	class of menu openning*/
-	.opened {
+	body.dark-theme .opened {
 
 		width: 98%;
 		transition: width 1s ease-in-out;
 
 	}
 
-	.closed {
+	body.dark-theme .closed {
 
 		width: 0%;
 		transition: width 1s ease-in-out;
 	}
 
-	.welcome-part h1 {
+	body.dark-theme .welcome-part h1 {
 
 		font-size: 40px;
 	}
 
-	.welcome-part h1 span {
+	body.dark-theme .welcome-part h1 span {
 
 		font-size: 30px;
 	}
 
-	.welcome-part p {
+	body.dark-theme .welcome-part p {
 
 		font-size: 25px;
 	}
 
-	.container .welcome-sec .contain {
+	body.dark-theme .container .welcome-sec .contain {
 
 		left: 45%;
 
 	}
 
-	.container .welcome-sec .about {
+	body.dark-theme .container .welcome-sec .about {
 
 		width: 90%;
 	}
 
-	.container .welcome-sec .about h2 {
+	body.dark-theme .container .welcome-sec .about h2 {
 		font-size: 25px;
 	}
 
-	.container .proj-contain {
+	body.dark-theme .container .proj-contain {
 
 		width: 90%;
 
 	}
 
-	.projects-sec .project-container {
+	body.dark-theme .projects-sec .project-container {
 
 		flex-direction: column;
 		align-items: center;
 		flex-wrap: nowrap;
 	}
 
-	.project-container .project-2 {
+	body.dark-theme .project-container .project-2 {
 
 		margin-right: 90px;
 	}
 
-	.contact .contact-div {
+	body.dark-theme .contact .contact-div {
 
 		width: 90%;
 	}
 
-	.contact .contact-div h2 {
+	body.dark-theme .contact .contact-div h2 {
 
 		font-size: 25px;
 
 	}
 
-	.contact .contact-div p {
+	body.dark-theme .contact .contact-div p {
 
 		font-size: 20px;
 	}
