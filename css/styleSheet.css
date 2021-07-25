@@ -14,7 +14,6 @@
 .nav-icon, .mobile-navbar {
 
 	display: none;
-
 }
 html, body {
 
@@ -58,6 +57,7 @@ header .nav {
 .nav a:hover {
 
   	color: #FC2277;
+		transform: scale(1.2);
 }
 
 
@@ -186,15 +186,16 @@ header .nav {
   display: flex;
   justify-content: center;
 
-position: absolute;
+	position: absolute;
   left: 600px;
   top: 450px;
 
 }
 
 .contain{
+	position: absolute;
+	right: 38rem;
 	align-items: center;
-	padding-left: 50px;
 }
 
 .container .welcome-sec .contain .circle {
@@ -353,9 +354,21 @@ position: absolute;
   	font-weight: 600;
 }
 
+.project-container .project-1 {
+  margin-left: 5vh;
+}
 
 .project-container .project-2 {
-  margin-left: 90px;
+  margin-left: 5vh;
+}
+
+.project-container .project-3 {
+
+	margin-left: 5vh;
+}
+.project-container .project-4 {
+
+	margin-left: 5vh;
 }
 
 .project-3 .project-title .website-link {
@@ -536,28 +549,27 @@ footer {
 
 /*style for mobile view on screen less than 500px*/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
 
-	header .nav {
-
-		display: none;
+	.nav-icon{
+		position: relative;
 	}
 
-	.nav-icon, .mobile-navbar {
+	.nav a{
+		position: relative;
+		margin-left: 15%;
+		padding: 0 2%;
+		font-size: 1rem;
+	}
+
+	header .nav {
 
 		display: block;
 	}
 
+	.nav-icon, .mobile-navbar {
 
-
-	.nav-icon i {
-
-		font-size: 40px;
-		color: white;
-		float: right;
-		margin: 10px;
-		cursor: pointer;
-
+		display: none;
 	}
 
 	.menu {
@@ -573,22 +585,6 @@ footer {
 		z-index: 1;
 		height: 99vh;
 
-
-	}
-
-	.close i {
-
-		font-size: 40px;
-		text-align: right;
-		color: white;
-
-	}
-	.close {
-
-		position: absolute;
-		right: 1px;
-		top: 1px;
-		display: none;
 
 	}
 	.menu li:first-of-type {
@@ -619,12 +615,6 @@ footer {
 		width: 98%;
 		transition: width 1s ease-in-out;
 
-	}
-
-	.closed {
-
-		width: 0%;
-		transition: width 1s ease-in-out;
 	}
 
 	.welcome-part h1 {
@@ -670,9 +660,23 @@ footer {
 		flex-wrap: nowrap;
 	}
 
+	.project-container .project-1 {
+
+		margin-right: 5vh;
+	}
+
 	.project-container .project-2 {
 
-		margin-right: 90px;
+		margin-right: 5vh;
+	}
+
+	.project-container .project-3 {
+
+		margin-right: 5vh;
+	}
+	.project-container .project-4 {
+
+		margin-right: 5vh;
 	}
 
 	.contact .contact-div {

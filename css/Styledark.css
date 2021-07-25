@@ -61,7 +61,7 @@
   box-shadow: 0 0 3px #00c9ff, 0 0 9px #00c9ff, 0 0 27px #00c9ff;
 }
 
-* {
+body.dark-theme * {
 
 	margin: 0;
 	padding: 0;
@@ -72,12 +72,7 @@
 
 
 
-.nav-icon, .mobile-navbar {
-
-	display: none;
-
-}
-body.dark-theme html, body {
+body.dark-theme , body {
 
   	overflow-x: hidden;
   	width: 100%;
@@ -254,8 +249,9 @@ body.dark-theme .container .welcome-sec .contain {
 }
 
 body.dark-theme .contain{
-	align-items: center;
-	padding-left: 50px;
+  	position: absolute;
+  	right: 38rem;
+  	align-items: center;
 }
 
 body.dark-theme .container .welcome-sec .contain .circle {
@@ -598,22 +594,36 @@ body.dark-theme footer {
 
 /*style for mobile view on screen less than 500px*/
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
+
+  body.dark-theme .nav-icon{
+    position: relative;
+  }
+
+  body.dark-theme .nav a{
+    position: relative;
+    margin-left: 15%;
+    padding: 0 2%;
+    font-size: 1rem;
+  }
+
 
 	body.dark-theme header .nav {
 
-		display: none;
+		display: block;
 	}
 
 	body.dark-theme .nav-icon, .mobile-navbar {
 
-		display: block;
+		display: none;
 	}
 
 
 
 	body.dark-theme .nav-icon i {
-
+    position: absolute;
+    top: 1%;
+    right: 1.5%;
 		font-size: 40px;
 		color: #CFCFCF;
 		float: right;
@@ -752,4 +762,21 @@ body.dark-theme footer {
 
 		font-size: 20px;
 	}
+}
+
+@media screen and (max-width: 800px) {
+  .proj-contain {
+    width: 80%;
+    align-items: center;
+  }
+  .contain{
+  	align-items: center;
+    position: relative;
+      right: 40%
+  }
+  body.dark-theme .contain{
+    align-items: center;
+    position: relative;
+      right: 40%
+  }
 }

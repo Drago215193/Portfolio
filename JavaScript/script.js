@@ -55,7 +55,6 @@ if (window.matchMedia("(max-width: 500px)").matches) {
 
 			document.querySelector(".project-" + i).style.display = "block";
 
-			document.querySelector(".project-2").style.marginRight = "0px";
 
 			$(".more").addClass("toggle");
 
@@ -88,7 +87,6 @@ if (window.matchMedia("(max-width: 500px)").matches) {
 
 			document.querySelector(".project-" + i).style.display = "block";
 
-			document.querySelector(".project-2").style.marginLeft = "0px";
 
 			$(".more").addClass("toggle");
 
@@ -99,7 +97,6 @@ if (window.matchMedia("(max-width: 500px)").matches) {
 
 			document.querySelector(".project-" + i).style.display = "none";
 
-						document.querySelector(".project-2").style.marginLeft = "60px";
 
 			$(".more").removeClass("toggle");
 			$(".less").addClass("toggle");
@@ -113,27 +110,6 @@ if (window.matchMedia("(max-width: 500px)").matches) {
 });
 
 }
-
-// add function to mobile nav icons
-
-document.querySelector('.nav-icon').addEventListener('click', function()  {
-
-	document.querySelector('.menu').classList.add('opened');
-	document.querySelector('.menu').classList.remove('closed');
-
-	document.querySelector('.close').style.display = 'block';
-
-});
-
-document.querySelector('.close').addEventListener('click', function() {
-
-	document.querySelector('.menu').classList.remove('opened');
-	document.querySelector('.menu').classList.add('closed');
-
-	document.querySelector('.close').style.display = 'none';
-
-
-});
 
 //light to dark mode
 const btn = document.querySelector(".btn-toggle");
